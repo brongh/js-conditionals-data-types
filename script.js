@@ -1,4 +1,4 @@
-// ========================== Exercise 1 ==============================
+n// ========================== Exercise 1 ==============================
 // Prompt the user for 2 numbers, then console.log their difference.
 // For example, if the user gives the numbers 2 and 3, the result should
 // be 1. If the user gives the numbers 3 and 2, the result should still
@@ -11,18 +11,13 @@
 // Write your solution below.
 // ====================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
+// var first = prompt("Enter a number");
+// var second = prompt("Enter another number");
+// var result = parseFloat(first) - parseFloat(second);
+// if (result < 0) {
+//     result = -result;
+// };
+// console.log(result);
 
 // ========================== Exercise 2 ==============================
 // Prompt the user for a number, then console.log its ordinal version.
@@ -36,22 +31,15 @@
 // ====================================================================
 // Write your solution below
 // ====================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// var suffixes = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th']
+// var input = prompt("Enter a number");
+// input = parseInt(input, 10);
+// if (input >= 4 && input <= 20 || Math.floor((input % 100) / 10) === 1 ) {
+//     console.log(input + 'th');
+// } else {
+//     var onesDigit = input % 10;
+//     console.log(input + suffixes[onesDigit]);
+// };
 
 // ========================== Exercise 3 =================================
 // Generate a random integer (hint: search Google or MDN) between 1 to 10.
@@ -61,20 +49,9 @@
 // Write your solution below.
 // =======================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// var hiddenInteger = Math.ceil(Math.random() * 10);
+// var userInteger = parseInt(prompt("Enter an integer"), 10);
+// alert(hiddenInteger === userInteger ? "You've got it!" : "Sorry, try again!");
 
 // ========================== Exercise 4 ===============================
 // Generate a random string of length 6 alphanumeric characters.
@@ -89,23 +66,20 @@
 // Write your solution below.
 // =====================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+// var randomPositions = [ Math.floor(Math.random() * alphabet.length),
+//                         Math.floor(Math.random() * alphabet.length),
+//                         Math.floor(Math.random() * alphabet.length),
+//                         Math.floor(Math.random() * alphabet.length),
+//                         Math.floor(Math.random() * alphabet.length),
+//                         Math.floor(Math.random() * alphabet.length) ];
+// var randomString = alphabet.charAt(randomPositions[0]) + 
+//                    alphabet.charAt(randomPositions[1]) + 
+//                    alphabet.charAt(randomPositions[2]) + 
+//                    alphabet.charAt(randomPositions[3]) + 
+//                    alphabet.charAt(randomPositions[4]) + 
+//                    alphabet.charAt(randomPositions[5]);
+// console.log(randomString);
 
 // ========================== Exercise 5 ==============================
 // Shuffle the elements of the given array below.
@@ -115,26 +89,17 @@
 // Write your solution below.
 // ====================================================================
 
-var testArray = [1, 2, 4, 8, 16, 32, 64, 128];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// var testArray = [1, 2, 4, 8, 16, 32, 64, 128];
+// var result = [];
+// result.push(testArray.splice(Math.floor(Math.random() * testArray.length), 1)[0]);
+// result.push(testArray.splice(Math.floor(Math.random() * testArray.length), 1)[0]);
+// result.push(testArray.splice(Math.floor(Math.random() * testArray.length), 1)[0]);
+// result.push(testArray.splice(Math.floor(Math.random() * testArray.length), 1)[0]);
+// result.push(testArray.splice(Math.floor(Math.random() * testArray.length), 1)[0]);
+// result.push(testArray.splice(Math.floor(Math.random() * testArray.length), 1)[0]);
+// result.push(testArray.splice(Math.floor(Math.random() * testArray.length), 1)[0]);
+// result.push(testArray.splice(Math.floor(Math.random() * testArray.length), 1)[0]);
+// console.log(result);
 
 // ========================== Exercise 6 ==============================
 // Examine the phonebook below.
@@ -168,27 +133,45 @@ var Phonebook = {
     "Nelson Tan"    :   63396565
 };
 
+// var input = prompt("Give me a name");
 
+// Task 1
+// if (Phonebook.hasOwnProperty(input)) {
+//     alert(Phonebook[input]);
+// } else {
+//     alert("Couldn't find " + input);
+// };
 
+// var phoneNumber = parseInt(prompt("Give me a number"), 10);
 
+// Task 2
+// if (Phonebook.hasOwnProperty(input)) {
+//     Phonebook[input] = phoneNumber;
+// } else {
+//     alert("Couldn't find " + input);
+// };
 
+// Task 3
+// if (!Phonebook.hasOwnProperty(input)) {
+//     Phonebook[input] = phoneNumber;
+// };
 
+// Task 4
+// if (Phonebook.hasOwnProperty(input)) {
+//     delete Phonebook[input];
+// };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Bonus
+// Object.keys and Object.values are methods that retrieve the keys and values of an object as an array
+// Array.includes and Array.find are methods that check whether an array contains a given element and looks up an element that matches a given criteria
+// var numbers = Object.values(Phonebook);
+// if (numbers.includes(phoneNumber) === true) {
+//     var names = Object.keys(Phonebook);
+//     var result = names.find(function(name) {
+//         return Phonebook[name] === phoneNumber;
+//     });
+//     console.log(result);
+// };
 
 // ====================== Bonus Exercise 7 =============================
 // JS Array / Object Handling - References vs Values
@@ -208,17 +191,20 @@ var Phonebook = {
 // Write your solution below.
 // =====================================================================
 
-var MutateMeNot = [1, 2, 3, 4, 5];
+// var MutateMeNot = [1, 2, 3, 4, 5];
+// var firstPosition = parseInt(prompt("Give me a position"), 10);
+// var secondPosition = parseInt(prompt("Give me another position"), 10);
 
+// First part
+// var tmp = MutateMeNot[firstPosition - 1];
+// MutateMeNot[firstPosition - 1] = MutateMeNot[secondPosition - 1];
+// MutateMeNot[secondPosition - 1] = tmp;
 
+// Second part (Comment out the solution to the first part)
+// var newArray = [ MutateMeNot[0], MutateMeNot[1], MutateMeNot[2], MutateMeNot[3], MutateMeNot[4] ];
+// var tmp = newArray[firstPosition - 1];
+// newArray[firstPosition - 1] = newArray[secondPosition - 1];
+// newArray[secondPosition - 1] = tmp;
 
-
-
-
-
-
-
-
-
-
+// console.log("The value of newArray is", newArray);
 // console.log("The value of MutateMeNot is", MutateMeNot);

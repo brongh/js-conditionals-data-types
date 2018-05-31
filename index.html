@@ -30,7 +30,7 @@
     <script src="./script.js"></script>
     <script>
         var clocky = document.getElementById('clock');
-        var endTime = '10:15:00 AM';
+        var endTime = '10:20:00 AM';
         
         clocky.innerHTML = new Date().toLocaleTimeString();
 
@@ -47,7 +47,7 @@
                 clocky.style.backgroundColor = 'red';
                 clocky.style.color = 'white';
                 beep();
-            };
+            };     
         };
         
         var timer = setInterval(updateTime, 1000);
